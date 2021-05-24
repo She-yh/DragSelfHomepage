@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 
 module.exports = {
-    publicPath: './',
+    publicPath: '/drag/dist',
     devServer: {
         // 项目运行时候的端口号
         port: 4000
