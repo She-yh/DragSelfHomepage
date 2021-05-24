@@ -1,24 +1,16 @@
-# drag
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# 拖拽式自主建站
+## 项目介绍
+  <center>为了让更多人体会到自主建站的快乐</center>
+  <center>我们设计了不同的组件，只使用简单的拖拽就可以完成页面的布局内容的输入</center>
+  <center>不过，项目只是处于起步阶段</center>
+  <center>不成熟的后台，不丰富的组件</center>
+  <center>这都是我们需要攻克的问题</center>
+  <center>也希望更更多开源爱好者能加入进来</center>
+## 组件介绍
+  * 基础组件
+    + 文本框 
+        >可以添加文字和图片
+    + 图片
+        >上传本地图片
+    + 照片集
+        >添加照片，标题，描述
