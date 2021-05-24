@@ -13,6 +13,7 @@
                 <h2 class="edit_title">Html</h2>
                 <textarea class="edit_text"></textarea>
             </div>
+            <div class="showbox"></div>
             <button class="bottom" @click="change_show">保存修改</button>
         </div>
     </div>
