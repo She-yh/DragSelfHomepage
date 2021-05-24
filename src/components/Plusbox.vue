@@ -85,7 +85,7 @@
         outline: none;
         resize: none;
         padding: 10px;
-        transition: all 0.5s;
+        transition: all 0.3s;
     }
     .edit_text:focus,.edit_text:hover {
         outline: none;

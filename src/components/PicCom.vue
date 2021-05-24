@@ -4,24 +4,24 @@
             <i class="fa fa-plus-square-o" aria-hidden="true" @click="addpiccard()"></i>
         </div>
         <div class="piccontainer">
-        <Piccard v-for="(element,index) in list" :key="index" data-aos="zoom-in"></Piccard>
+            <Piccard v-for="(element,index) in list" :key=index></Piccard>
         </div>
     </div>
 </template>
-
 <script>
     import Piccard from "@/components/Piccard";
+
     export default {
         name: "PicCom",
-        components:{Piccard},
-        data(){
-            return{
-                list:[],
-                last:0
+        components: {Piccard},
+        data() {
+            return {
+                list: [],
+                last: 0
             }
         },
         methods: {
-            addpiccard(){
+            addpiccard() {
                 this.list.push(++this.last);
             }
         },
@@ -32,9 +32,15 @@
     .fa-plus-square-o {
         color: #7a7a7a;
     }
+
     .fa-plus-square-o :before {
         font-size: 20px;
     }
+
+    Piccard {
+        transition: all 0.5s;
+    }
+
     .piccontainer {
         overflow: hidden;
         height: 50vh;
@@ -46,6 +52,7 @@
         text-align: center;
         backdrop-filter: brightness(80%);
     }
+
     .pic-top {
         height: 30px;
         width: 100%;
