@@ -7,7 +7,6 @@
                      @get_show="get_show" @get_content="get_content"></Plusbox>
         </transition>
         <div class="dndList-list-view">
-            <h3 class="h-view">布置区</h3>
             <draggable :list="list_view" :options="{group:'article', disabled: disabled}"
                        @start="start22"
                        @end="end22"
@@ -124,21 +123,8 @@
     .fa-times-circle-o:before {
         font-size: 20px;
     }
-
-    .h-view {
-        z-index: 100;
-        width: 120px;
-        height: 35px;
-        line-height: 35px;
-        border-radius: 20px;
-        backdrop-filter: blur(8px);
-        position: fixed;
-        top: 20px;
-        margin-left: 43vw;
-        color: white;
-    }
-
     .dndList-list-view {
+        min-width: 280px;
         display: flex;
         flex-direction: column;
     }
@@ -148,6 +134,7 @@
         right: 0;
         height: 100vh;
         backdrop-filter: blur(5px);
+        min-width: 60px;
         top: 0;
         position: fixed;;
     }
@@ -171,16 +158,18 @@
 
     .body-face {
         position: fixed;
-        left: 18vw;
+        right: 20vw;
         width: 60vw;
         height: 100vh;
         backdrop-filter: blur(50px);
+        min-width: 280px;
     }
 
     .dragArea-view {
         position: absolute;
-        left: 18vw;
+        right: 20vw;
         width: 60vw;
+        min-width: 280px;
         height: 100%;
         min-height: 100vh;
     }
