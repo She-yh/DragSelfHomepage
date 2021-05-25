@@ -36,12 +36,10 @@
                 this.showcontent();
             },
             add_com() {
-                this.$set(this.list_preview, 3, 'isSelf');
                 this.$emit("get_list", this.list_preview);
                 this.$emit("get_content",this.HtmlContent);
             },
             showcontent() {
-                alert("111");
                 this.HtmlContent=$("#html").val();
                 $("#showcontent").html(this.HtmlContent);
             }

@@ -30,9 +30,8 @@
                        class="dragArea-preview">
                 <div class="list-complete-item-preview" v-for="(element) in list_preview" :key="element.id">
                     <i class="fa"
-                       :class="{'fa-align-justify':element.isText,'fa-picture-o':element.isPic,'fa-comments':element.isCom}"
+                       :class="{'fa-align-justify':element.isText,'fa-picture-o':element.isPic,'fa-comments':element.isCom,'fa-scribd':element.isSelf}"
                        aria-hidden="true"></i>
-                    <i v-if="element.isSelf">S</i>
                 </div>
             </draggable>
             <div class="list-complete-item-preview">
@@ -70,6 +69,7 @@
         methods: {
             get_show(showbox) {
                 this.showbox = showbox;
+                this.list_preview.push({id:4,isSelf:true});
             },
             get_content(HtmlContent) {
                 this.HtmlContent = HtmlContent;
@@ -123,6 +123,7 @@
     .fa-times-circle-o:before {
         font-size: 20px;
     }
+
     .dndList-list-view {
         min-width: 280px;
         display: flex;
