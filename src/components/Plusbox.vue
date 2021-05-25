@@ -50,7 +50,9 @@
 </script>
 
 <style scoped>
-
+    #html{
+        background-color: #ffffff;
+    }
     .bottomcontainer{
         width: 100vw;
         position: absolute;
@@ -87,17 +89,13 @@
         align-content: space-around;
         justify-content: space-around;
     }
-
-    .edit_box {
-
-    }
-
     .edit_title {
         color: #ffffff;
         margin-bottom: 50px;
     }
 
     .edit_text {
+
         box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.5);
         border-radius: 10px;
         overflow: hidden;
