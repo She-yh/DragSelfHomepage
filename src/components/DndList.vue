@@ -1,8 +1,11 @@
 <template>
     <div>
         <div class="body-face"></div>
-        <Plusbox v-if="showbox" :showbox="showbox" :list_preview="list_preview" @get_list="get_list"
-                 @get_show="get_show"></Plusbox>
+        <transition appear enter-active-class="animated swing" appear-active-class="animated swing"
+                    leave-active-class="animated shake">
+            <Plusbox v-if="showbox" :showbox="showbox" :list_preview="list_preview" @get_list="get_list"
+                     @get_show="get_show" @get_content="get_content"></Plusbox>
+        </transition>
         <div class="dndList-list-view">
             <h3 class="h-view">布置区</h3>
             <draggable :list="list_view" :options="{group:'article', disabled: disabled}"
@@ -14,7 +17,7 @@
                         <TextCom v-if="element.isText"></TextCom>
                         <PicCom v-else-if="element.isPic"></PicCom>
                         <Comments v-else-if="element.isCom"></Comments>
-                        <Piccard v-else-if="element.isPiccard"></Piccard>
+                        <div id="self" v-else v-html="HtmlContent"></div>
                         <i class="fa fa-times-circle-o" aria-hidden="true" @click="handleDel(index, element.id)"></i>
                     </div>
                 </div>
@@ -45,6 +48,7 @@
     import PicCom from "@/components/PicCom";
     import Comments from "@/components/Comments";
     import Plusbox from "@/components/Plusbox";
+
     export default {
         name: 'DndList',
         components: {draggable, TextCom, PicCom, Comments, Plusbox},
@@ -59,13 +63,18 @@
                     {id: 2, isCom: true},
                     {id: 3, isPic: true}
                 ],
+                HtmlContent: '',
                 showbox: false
             }
         },
         computed: {},
         methods: {
-            get_show(data) {
-                this.showbox = data;
+            get_show(showbox) {
+                this.showbox = showbox;
+            },
+            get_content(HtmlContent) {
+                this.HtmlContent = HtmlContent;
+                alert(HtmlContent);
             },
             get_list(data) {
                 console.log(data);
@@ -96,7 +105,7 @@
         }
     }
 </script>
-
+<style src="../assets/animate.css/animate.min.css"></style>
 <style rel="stylesheet">
     * {
         padding: 0;
