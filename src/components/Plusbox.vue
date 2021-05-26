@@ -62,6 +62,7 @@
     }
     .bottom {
         backdrop-filter: blur(100px);
+        -webkit-backdrop-filter: blur(100px);
         background-color: rgba(0,0,0,0.5);
         width: 100px;
         height: 30px;
@@ -73,6 +74,7 @@
 
     .plus-face {
         backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         position: fixed;
         z-index: 1000;
     }

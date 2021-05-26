@@ -74,5 +74,6 @@
         flex-direction: column;
         align-items: center;
         backdrop-filter: brightness(80%);
+        -webkit-backdrop-filter: brightness(80%);
     }
 </style>

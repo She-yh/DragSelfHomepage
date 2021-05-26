@@ -51,6 +51,7 @@
         width: 100%;
         text-align: center;
         backdrop-filter: brightness(80%);
+        -webkit-backdrop-filter: brightness(80%);
     }
 
     .pic-top {

@@ -85,7 +85,7 @@
         border: 0;
         outline-style: none;
         text-align: center;
-        /*filter: brightness(70%);*/
         backdrop-filter: brightness(70%);
+        -webkit-backdrop-filter: brightness(70%);
     }
 </style>

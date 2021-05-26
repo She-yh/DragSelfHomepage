@@ -135,6 +135,7 @@
         right: 0;
         height: 100vh;
         backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
         min-width: 60px;
         top: 0;
         position: fixed;;
@@ -163,6 +164,7 @@
         width: 60vw;
         height: 100vh;
         backdrop-filter: blur(50px);
+        -webkit-backdrop-filter: blur(50px);
         min-width: 280px;
     }
 
