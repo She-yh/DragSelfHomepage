@@ -8,9 +8,9 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "aos": "^2.3.4",
     "core-js": "^3.6.5",
     "element-ui": "^2.15.1",
+    "html2canvas": "^1.4.1",
     "jquery": "^3.6.0",
     "sortable": "^2.0.0",
     "vue": "^2.6.11",

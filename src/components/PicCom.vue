@@ -1,7 +1,7 @@
 <template>
     <div class="picwrap">
         <div class="pic-top">
-            <i class="fa fa-plus-square-o" aria-hidden="true" @click="addpiccard()"></i>
+            <i @click="addpiccard()" style="color:rgba(0,0,0,0.9);font-size:14px">点击此处添加卡片</i>
         </div>
         <div class="piccontainer">
             <Piccard v-for="(element,index) in list" :key=index></Piccard>

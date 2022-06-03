@@ -6,7 +6,7 @@
             <Plusbox v-if="showbox" :showbox="showbox" :list_preview="list_preview" @get_list="get_list"
                      @get_show="get_show" @get_content="get_content"></Plusbox>
         </transition>
-        <div class="dndList-list-view">
+        <div id="dndList-list-view">
             <draggable :list="list_view" :options="{group:'article', disabled: disabled}"
                        @start="start22"
                        @end="end22"
@@ -17,7 +17,7 @@
                         <PicCom v-else-if="element.isPic"></PicCom>
                         <Comments v-else-if="element.isCom"></Comments>
                         <div id="self" v-else v-html="HtmlContent"></div>
-                        <i class="fa fa-times-circle-o" aria-hidden="true" @click="handleDel(index, element.id)"></i>
+                        <div @click="handleDel(index, element.id)" style="width:100%">删除</div>
                     </div>
                 </div>
             </draggable>
@@ -29,13 +29,11 @@
                        @end="end"
                        class="dragArea-preview">
                 <div class="list-complete-item-preview" v-for="(element) in list_preview" :key="element.id">
-                    <i class="fa"
-                       :class="{'fa-align-justify':element.isText,'fa-picture-o':element.isPic,'fa-comments':element.isCom,'fa-scribd':element.isSelf}"
-                       aria-hidden="true"></i>
+                    <i>{{element.isText?"文字":""}}{{element.isCom?"评论":""}}{{element.isPic?"卡片":""}} </i>
                 </div>
             </draggable>
             <div class="list-complete-item-preview">
-                <i class="fa fa-plus-square-o" aria-hidden="true" @click="showbox_func"></i>
+                <i>添加</i>
             </div>
         </div>
     </div>
@@ -113,18 +111,7 @@
         cursor: default;
     }
 
-    .fa-times-circle-o {
-        color: #7a7a7a;
-        position: absolute;
-        top: 5px;
-        right: 5px;
-    }
-
-    .fa-times-circle-o:before {
-        font-size: 20px;
-    }
-
-    .dndList-list-view {
+    #dndList-list-view {
         min-width: 280px;
         display: flex;
         flex-direction: column;
@@ -162,9 +149,10 @@
         position: fixed;
         right: 20vw;
         width: 60vw;
-        height: 100vh;
-        backdrop-filter: blur(50px);
-        -webkit-backdrop-filter: blur(50px);
+        min-height: 100vh;
+        background-color: rgb(42, 42, 42);
+        /* backdrop-filter: blur(50px);
+        -webkit-backdrop-filter: blur(50px); */
         min-width: 280px;
     }
 
@@ -173,7 +161,7 @@
         right: 20vw;
         width: 60vw;
         min-width: 280px;
-        height: 100%;
+        /* height: 100%; */
         min-height: 100vh;
     }
 

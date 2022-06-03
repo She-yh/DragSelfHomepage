@@ -3,7 +3,7 @@
         <div class="text-top">
             <i class="fontsize">A</i>
             <input type="file" id="upload" accept="image/*" @change="showImg($event)"/>
-            <label for="upload"><i class="fa fa-plus-square-o" aria-hidden="true"></i></label>
+            <label for="upload" style="color:rgba(0, 0, 0, 0.9);font-size: 14px;">背景</label>
         </div>
         <div class="text-back">
         <textarea class="textcom">

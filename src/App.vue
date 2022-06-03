@@ -1,16 +1,21 @@
 <template>
     <div id="app">
         <DndList/>
+        <DownloadVue/>
+        <SavePicVue/>
     </div>
 </template>
 
 <script>
     import DndList from './components/DndList.vue'
-
+    import DownloadVue from './components/Download.vue'
+    import SavePicVue from './components/SavePic.vue'
     export default {
         name: 'App',
         components: {
-            DndList
+            DndList,
+            DownloadVue,
+            SavePicVue
         }
     }
 </script>

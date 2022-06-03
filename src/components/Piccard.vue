@@ -2,7 +2,7 @@
     <div class="card-container">
         <div class="pic" @change="showImg($event)">
             <input type="file" id="upload" accept="image/*" @change="showImg($event)"/>
-            <label for="upload"><i class="fa fa-plus-square-o" aria-hidden="true"></i></label>
+            <label for="upload"><i>点击设置照片</i></label>
         </div>
         <div class="textcontainer">
             <input class="title" placeholder="请输入标题"/>
